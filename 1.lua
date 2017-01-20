@@ -1,16 +1,16 @@
---lua5.1»ù±¾Óï·¨
---*******************1.ÃüÃû¹æ·¶ Í¬C****************************
---*******************2.ÀàÐÍÓëÖµ    ****************************
+ï»¿--lua5.1åŸºæœ¬è¯­æ³•
+--*******************1.å‘½åè§„èŒƒ åŒC****************************
+--*******************2.ç±»åž‹ä¸Žå€¼    ****************************
 --[[
-8ÖÖ»ù´¡ÀàÐÍ:
-nil			¿Õ
-boolean		²¼¶û
-number		Êý×Ö
-string		×Ö·û´®
-function	º¯Êý
-table		±í
-userdata	×Ô¶¨ÒåÊý¾ÝÀàÐÍ
-thread		Ïß³Ì
+8ç§åŸºç¡€ç±»åž‹:
+nil			ç©º
+boolean		å¸ƒå°”
+number		æ•°å­—
+string		å­—ç¬¦ä¸²
+function	å‡½æ•°
+table		è¡¨
+userdata	è‡ªå®šä¹‰æ•°æ®ç±»åž‹
+thread		çº¿ç¨‹
 ]]
 print("hello".."world")
 print(#"hello world")
@@ -24,29 +24,29 @@ var={}
 print(type(var))
 str="I an a str"
 print (str)
---µ¥ÒýºÅÓëË«ÒýºÅ¾ù¿É×÷Îª×Ö·û´®±êÊ¶
---µ±×Ö·û´®¶àÖÖ¸ñÊ½Ê±¿ÉÒÔÓÃÒÔÏÂ·½Ê½À´¶¨Òå
+--å•å¼•å·ä¸ŽåŒå¼•å·å‡å¯ä½œä¸ºå­—ç¬¦ä¸²æ ‡è¯†
+--å½“å­—ç¬¦ä¸²å¤šç§æ ¼å¼æ—¶å¯ä»¥ç”¨ä»¥ä¸‹æ–¹å¼æ¥å®šä¹‰
 long_str=[[I am a "long",long str]]
 print (long_str)
---tableÀàËÆÓÚC++ÖÐMAP
+--tableç±»ä¼¼äºŽC++ä¸­MAP
 
---luaÖÐÖ»ÓÐnilºÍfalse±íÊ¾¼Ù ÆäÓà¶¼ÎªÕæ
---Ò»¸öÈ«¾Ö±äÁ¿¸³ÖµÎªnil ±íÊ¾É¾³ý¸Ã±äÁ¿
---0ÒàÎªÕæ ÓëCÇø±ð
---¸¡µãÓëÕûÐÎ½ÔÎªnumber
+--luaä¸­åªæœ‰nilå’Œfalseè¡¨ç¤ºå‡ å…¶ä½™éƒ½ä¸ºçœŸ
+--ä¸€ä¸ªå…¨å±€å˜é‡èµ‹å€¼ä¸ºnil è¡¨ç¤ºåˆ é™¤è¯¥å˜é‡
+--0äº¦ä¸ºçœŸ ä¸ŽCåŒºåˆ«
+--æµ®ç‚¹ä¸Žæ•´å½¢çš†ä¸ºnumber
 var=0
 if var then
 print("var is true")
 else
 print("var is false")
 end
---*******************3.±í´ïÊ½   ****************************
---**ËãÊõÔËËã·û			+ - * / ^ % (¸ººÅ)
---**¹ØÏµÔËËã·û			< > <= >= ~= ==
---**Âß¼­²Ù×÷·û			and or not
---**×Ö·ûÁ¬½Ó²Ù×÷·û		..
---**²Ù×÷·ûÓÅÏÈ¼¶
---**table¹¹ÔìÊ½ 		t={}
+--*******************3.è¡¨è¾¾å¼   ****************************
+--**ç®—æœ¯è¿ç®—ç¬¦			+ - * / ^ % (è´Ÿå·)
+--**å…³ç³»è¿ç®—ç¬¦			< > <= >= ~= ==
+--**é€»è¾‘æ“ä½œç¬¦			and or not
+--**å­—ç¬¦è¿žæŽ¥æ“ä½œç¬¦		..
+--**æ“ä½œç¬¦ä¼˜å…ˆçº§
+--**tableæž„é€ å¼ 		t={}
 a={x=10,y=20}
 t={}
 t[1]="a"   t[2]="b"  t[3]="c"  		print(#t)
@@ -58,70 +58,70 @@ age="10",
 "ichiu"
 }
 print(c.name,c.age,c[1],c[2])
---C++½á¹¹ÌåÐ´·¨Ò²ÐÐ
+--C++ç»“æž„ä½“å†™æ³•ä¹Ÿè¡Œ
 d={}
 d.name="wang"
 d.age="10"
 d[1]="yiyu"
 d[2]="ichiu"
 print(d.name,d.age,d[1],d[2])
---*******************4.Óï¾ä  *********************************
---**¸³ÖµÓï¾ä
---**¾Ö²¿±äÁ¿Óë¿é
+--*******************4.è¯­å¥  *********************************
+--**èµ‹å€¼è¯­å¥
+--**å±€éƒ¨å˜é‡ä¸Žå—
 a1,a2=10,20
 print(a1,a2)
-a1,a2=a2,a1    				--²»ÓÃ±äÁ¿ÖÐ½é
+a1,a2=a2,a1    				--ä¸ç”¨å˜é‡ä¸­ä»‹
 print(a1,a2)
---¶¨Òå¾Ö²¿±äÁ¿ Ç°Ãæ¼Ólocal  £¬·ñÔòÎªÈ«¾Ö
+--å®šä¹‰å±€éƒ¨å˜é‡ å‰é¢åŠ local  ï¼Œå¦åˆ™ä¸ºå…¨å±€
 function someValue()
 	local b1,b2=10,20
 	return b1,b2
 end
 print(someValue())
---**¿ØÖÆÓï¾ä
+--**æŽ§åˆ¶è¯­å¥
 --------------if...then...else
---C++ÖÐ
+--C++ä¸­
 --[[
 	if(a>b){
 	}elseif(a>c){
 	}else{
 	}
 ]]
---luaÖÐ
+--luaä¸­
 a,b,c=1,2,3
 if a > b then print(a)
 elseif a>c  then print(b)
 else print(c)
 end
 ----------------while
---C++ÖÐ
+--C++ä¸­
 --[[
 	while(a<5){
 	a++
 	}
 ]]
---luaÖÐ
+--luaä¸­
 while a<5 do
 a=a+1
 end
 ------------------repeat...until
---ÀàËÆÓÚC++ÖÐdo...while
---C++ÖÐ
+--ç±»ä¼¼äºŽC++ä¸­do...while
+--C++ä¸­
 --[[
 	i=0;
 	do{
 	i=i+1;
 	cout<<i;
-	}while(i<3)		Êä³ö1£¬2£¬3
+	}while(i<3)		è¾“å‡º1ï¼Œ2ï¼Œ3
 ]]
---luaÖÐ
+--luaä¸­
 local i=0
 repeat
 	i=i+1
 	print(i..",")
-until i>3			--Êä³ö1£¬2£¬3£¬4
+until i>3			--è¾“å‡º1ï¼Œ2ï¼Œ3ï¼Œ4
 ------------------for
---Êý×ÖforÑ­»·
+--æ•°å­—forå¾ªçŽ¯
 --[[
 	for init,max/min value, increment
 	do
@@ -133,8 +133,8 @@ for i=1,10,1
 do
    print(i)
 end
---·ºÐÍforÑ­»·
---ÓÃµü´úÆ÷º¯ÊýÀ´±éÀúËùÓÐµÄÖµ Í¬C++ÖÐvectorÀàËÆ ¸ü¼òµ¥·½±ã
+--æ³›åž‹forå¾ªçŽ¯
+--ç”¨è¿­ä»£å™¨å‡½æ•°æ¥éåŽ†æ‰€æœ‰çš„å€¼ åŒC++ä¸­vectorç±»ä¼¼ æ›´ç®€å•æ–¹ä¾¿
 --[[
 for <var-list> in <exp-list> do
       <body>
@@ -158,40 +158,40 @@ local testTb = {"One", "Two", "Three"}
       print(index, value)
  end
 --[[
-º¯Êývalues µÄ·µ»ØÖµÊÇÒ»¸öÁíÍâÒ»¸öÄäÃûº¯Êý£¬ÆäÄÚÈÝÎª function () i = i + 1; return t[i] end
-²¢ÇÒÕâ¸öÄäÃûº¯Êý±¾ÉíÓÖÊÇÒ»¸ö±Õ°ü (closure)£¬ÒòÎªÔÚÕâ¸öº¯ÊýÖÐÊ¹ÓÃÁËÍâ²ãµÄÊý¾Ý£¬¼´ i ºÍ t£¬ i ºÍ t ÊÇ values º¯ÊýÀïµÄ¾Ö²¿±äÁ¿£¬±»ÄÇ¸öÄäÃûº¯ÊýÊ¹ÓÃ£¬ËùÒÔÄäÃûº¯ÊýºÍ t, i ×é³ÉÁË±Õ°ü¡£
-a = values(t) £¬Ôò a ÎªÒ»¸ö±Õ°üº¯Êý
-£¬³õÊ¼×´Ì¬ÏÂ£¬±Õ°üÖÐµÄ i Îª 0£¬ t Îª´«ÈëµÄ t £¨¼´ {10, 20, 30}£©£¬Èç¹ûÄãÓÃ a() µÄ·½·¨µ÷ÓÃÕâ¸ö±Õ°üº¯Êý£¬Ôò»áÖ´ÐÐÄäÃûº¯ÊýÖÐµÄÄÚÈÝ£¬¼´ i Ôö¼Ó1£¬ ²¢·µ»Ø t[i]
-return¾¹È»²»ÍË³ö£¬£¬£¬£¬£¬
+å‡½æ•°values çš„è¿”å›žå€¼æ˜¯ä¸€ä¸ªå¦å¤–ä¸€ä¸ªåŒ¿åå‡½æ•°ï¼Œå…¶å†…å®¹ä¸º function () i = i + 1; return t[i] end
+å¹¶ä¸”è¿™ä¸ªåŒ¿åå‡½æ•°æœ¬èº«åˆæ˜¯ä¸€ä¸ªé—­åŒ… (closure)ï¼Œå› ä¸ºåœ¨è¿™ä¸ªå‡½æ•°ä¸­ä½¿ç”¨äº†å¤–å±‚çš„æ•°æ®ï¼Œå³ i å’Œ tï¼Œ i å’Œ t æ˜¯ values å‡½æ•°é‡Œçš„å±€éƒ¨å˜é‡ï¼Œè¢«é‚£ä¸ªåŒ¿åå‡½æ•°ä½¿ç”¨ï¼Œæ‰€ä»¥åŒ¿åå‡½æ•°å’Œ t, i ç»„æˆäº†é—­åŒ…ã€‚
+a = values(t) ï¼Œåˆ™ a ä¸ºä¸€ä¸ªé—­åŒ…å‡½æ•°
+ï¼Œåˆå§‹çŠ¶æ€ä¸‹ï¼Œé—­åŒ…ä¸­çš„ i ä¸º 0ï¼Œ t ä¸ºä¼ å…¥çš„ t ï¼ˆå³ {10, 20, 30}ï¼‰ï¼Œå¦‚æžœä½ ç”¨ a() çš„æ–¹æ³•è°ƒç”¨è¿™ä¸ªé—­åŒ…å‡½æ•°ï¼Œåˆ™ä¼šæ‰§è¡ŒåŒ¿åå‡½æ•°ä¸­çš„å†…å®¹ï¼Œå³ i å¢žåŠ 1ï¼Œ å¹¶è¿”å›ž t[i]
+returnç«Ÿç„¶ä¸é€€å‡ºï¼Œï¼Œï¼Œï¼Œï¼Œ
 ]]
---**breakÓëreturn
+--**breakä¸Žreturn
 
---*******************5.º¯Êý *********************************
---**º¯Êý¶¨Òå
+--*******************5.å‡½æ•° *********************************
+--**å‡½æ•°å®šä¹‰
 func=function()  end
 function func()  end
---¶ÔÏó
+--å¯¹è±¡
 class={}
 function class.func1()
 end
 function class:func2()
 end
---luaÖÐÊ¹ÓÃ¡°£º¡±¶¨ÒåµÄº¯Êý»á×Ô¶¯´«ÈëÒ»¸öÃûÎªselfµÄ±äÁ¿£¬selfÍ¬c++ÖÐµÄthisÒ»Ñù£¬±íÊ¾µ±Ç°¶ÔÏóµÄÖ¸Õë£»
---¶ø¡°."Ã»ÓÐself
+--luaä¸­ä½¿ç”¨â€œï¼šâ€å®šä¹‰çš„å‡½æ•°ä¼šè‡ªåŠ¨ä¼ å…¥ä¸€ä¸ªåä¸ºselfçš„å˜é‡ï¼ŒselfåŒc++ä¸­çš„thisä¸€æ ·ï¼Œè¡¨ç¤ºå½“å‰å¯¹è±¡çš„æŒ‡é’ˆï¼›
+--è€Œâ€œ."æ²¡æœ‰self
 function class.func1(self)end
-function class:func2()end --func1Óëfunc2µÈ¼Û
---**º¯Êý²ÎÊýÓë·µ»ØÖµ
+function class:func2()end --func1ä¸Žfunc2ç­‰ä»·
+--**å‡½æ•°å‚æ•°ä¸Žè¿”å›žå€¼
 function f()
 	return 30,50
 end
 x,y=f()
 print(x,y)
---return ·µ»ØÒ»¸öº¯ÊýµÄ·µ»ØÖµ£¬return f()»á°Ñf()·µ»ØµÄËùÓÐ·µ»ØÖµ¶¼·µ»Ø£¬return(f())»áÆÈÊ¹ËüÖ»ÄÜ·µ»ØÒ»¸ö½á¹û
---unpack½ÓÊÜÒ»¸öÊý×é×÷Îª²ÎÊý£¬²¢´ÓÏÂ±ê1¿ªÊ¼·µ»ØÊý×éµÄËùÓÐÔªËØ
---unpack¾­³£ÓÃÓÚº¯Êý²ÎÊý´«µÝ
+--return è¿”å›žä¸€ä¸ªå‡½æ•°çš„è¿”å›žå€¼ï¼Œreturn f()ä¼šæŠŠf()è¿”å›žçš„æ‰€æœ‰è¿”å›žå€¼éƒ½è¿”å›žï¼Œreturn(f())ä¼šè¿«ä½¿å®ƒåªèƒ½è¿”å›žä¸€ä¸ªç»“æžœ
+--unpackæŽ¥å—ä¸€ä¸ªæ•°ç»„ä½œä¸ºå‚æ•°ï¼Œå¹¶ä»Žä¸‹æ ‡1å¼€å§‹è¿”å›žæ•°ç»„çš„æ‰€æœ‰å…ƒç´ 
+--unpackç»å¸¸ç”¨äºŽå‡½æ•°å‚æ•°ä¼ é€’
 
---**¿É±ä²ÎÊý
---luaÖÐ¡°...¡±±íÊ¾¸Ãº¯Êý¿ÉÒÔ½ÓÊÜ²»Í¬ÊýÁ¿µÄÊµ²Î
+--**å¯å˜å‚æ•°
+--luaä¸­â€œ...â€è¡¨ç¤ºè¯¥å‡½æ•°å¯ä»¥æŽ¥å—ä¸åŒæ•°é‡çš„å®žå‚
 function add(...)
 	local s=0
 	for i,v in ipairs{...}do
@@ -200,14 +200,14 @@ function add(...)
 	return s
 end
 print(add (1,2,3,4,5))
---Lua½«º¯ÊýµÄ²ÎÊý·ÅÔÚÒ»¸ö½ÐargµÄ±íÖÐ£¬³ýÁË²ÎÊýÒÔÍâ£¬arg±íÖÐ»¹ÓÐÒ»¸öÓòn±íÊ¾²ÎÊýµÄ¸öÊý
+--Luaå°†å‡½æ•°çš„å‚æ•°æ”¾åœ¨ä¸€ä¸ªå«argçš„è¡¨ä¸­ï¼Œé™¤äº†å‚æ•°ä»¥å¤–ï¼Œargè¡¨ä¸­è¿˜æœ‰ä¸€ä¸ªåŸŸnè¡¨ç¤ºå‚æ•°çš„ä¸ªæ•°
 function g (a, b, ...) end
 g(3)              --	a=3, b=nil, arg={n=0}
 g(3, 4)           --	a=3, b=4, arg={n=0}
 g(3, 4, 5, 8)     --	a=3, b=4, arg={5, 8; n=2}
 
---**±Õ°üº¯Êý
---±Õ°üº¯ÊýÊÇÖ¸½«Ò»¸öº¯ÊýÐ´ÔÚÁíÒ»¸öº¯ÊýÖ®ÄÚ£¬Õâ¸öÎ»ÓÚÄÚ²¿µÄº¯Êý¿ÉÒÔ·ÃÎÊÍâ²¿º¯ÊýÖÐµÄ¾Ö²¿±äÁ¿
+--**é—­åŒ…å‡½æ•°
+--é—­åŒ…å‡½æ•°æ˜¯æŒ‡å°†ä¸€ä¸ªå‡½æ•°å†™åœ¨å¦ä¸€ä¸ªå‡½æ•°ä¹‹å†…ï¼Œè¿™ä¸ªä½äºŽå†…éƒ¨çš„å‡½æ•°å¯ä»¥è®¿é—®å¤–éƒ¨å‡½æ•°ä¸­çš„å±€éƒ¨å˜é‡
 function newCounter()
 	local i=0
 	return function()
@@ -218,7 +218,7 @@ end
 c1=newCounter()
 print(c1())
 print(c1())
---ÄäÃûº¯Êý·ÃÎÊÁËÒ»¸ö·Ç¾Ö²¿µÄ±äÁ¿i£¬iÓÃÀ´±£³ÖÒ»¸ö¼ÆÊýÆ÷£¬±íÃæÉÏ¿´
---ÓÉÓÚ´´½¨±äÁ¿iµÄº¯Êý(newCounter)ÒÑ¾­·µ»Ø£¬ËùÒÔÖ®ºóÃ¿´Îµ÷ÓÃÄäÃûº¯ÊýÊ±£¬i¾ùÒÑ³¬³öËüµÄ×÷ÓÃÓò
---µ«ÊÇÒòÎªÄäÃûº¯ÊýÒ»Ö±ÔÚÊ¹ÓÃ±äÁ¿i£¬ËùÒÔlua»áÕýÈ·µÄÎ¬»¤iµÄÉúÃüÖÜÆÚ
---ÔÚÄäÃûº¯ÊýµÄÄÚ²¿£¬i¼È²»ÊÇÈ«¾Ö±äÁ¿£¬Ò²²»ÊÇ¾Ö²¿±äÁ¿£¬±»³Æ×÷Íâ²¿µÄ¾Ö²¿±äÁ¿»òupvalue
+--åŒ¿åå‡½æ•°è®¿é—®äº†ä¸€ä¸ªéžå±€éƒ¨çš„å˜é‡iï¼Œiç”¨æ¥ä¿æŒä¸€ä¸ªè®¡æ•°å™¨ï¼Œè¡¨é¢ä¸Šçœ‹
+--ç”±äºŽåˆ›å»ºå˜é‡içš„å‡½æ•°(newCounter)å·²ç»è¿”å›žï¼Œæ‰€ä»¥ä¹‹åŽæ¯æ¬¡è°ƒç”¨åŒ¿åå‡½æ•°æ—¶ï¼Œiå‡å·²è¶…å‡ºå®ƒçš„ä½œç”¨åŸŸ
+--ä½†æ˜¯å› ä¸ºåŒ¿åå‡½æ•°ä¸€ç›´åœ¨ä½¿ç”¨å˜é‡iï¼Œæ‰€ä»¥luaä¼šæ­£ç¡®çš„ç»´æŠ¤içš„ç”Ÿå‘½å‘¨æœŸ
+--åœ¨åŒ¿åå‡½æ•°çš„å†…éƒ¨ï¼Œiæ—¢ä¸æ˜¯å…¨å±€å˜é‡ï¼Œä¹Ÿä¸æ˜¯å±€éƒ¨å˜é‡ï¼Œè¢«ç§°ä½œå¤–éƒ¨çš„å±€éƒ¨å˜é‡æˆ–upvalue

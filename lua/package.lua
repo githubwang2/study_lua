@@ -1,4 +1,4 @@
---LuaµÄ°ü(package)
+ï»¿--Luaçš„åŒ…(package)
 
 
 local c=require("package2")
@@ -7,7 +7,7 @@ print(c.foo(1,2))
 -->        	table: 003AB8C0
 -->			3
 
---require ¼ÓÔØÎÄ¼ş£¬ÔËĞĞ
+--require åŠ è½½æ–‡ä»¶ï¼Œè¿è¡Œ
 
 print("require")
 for i=1,2 do

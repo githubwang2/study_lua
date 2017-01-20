@@ -1,4 +1,4 @@
-local class={}
+﻿local class={}
 
 --void class::foo(int a,int b)
 function class.foo(a,b)

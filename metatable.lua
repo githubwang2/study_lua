@@ -1,13 +1,13 @@
-Set = {}
-local mt = {} -- ¼¯ºÏµÄÔª±í
+ï»¿Set = {}
+local mt = {} -- é›†åˆçš„å…ƒè¡¨
 
--- ¸ù¾Ý²ÎÊýÁÐ±íÖÐµÄÖµ´´½¨Ò»¸öÐÂµÄ¼¯ºÏ
+-- æ ¹æ®å‚æ•°åˆ—è¡¨ä¸­çš„å€¼åˆ›å»ºä¸€ä¸ªæ–°çš„é›†åˆ
 function Set.new(t)
 	local set = {}
 	mt.__add=Set.union
 	mt.__sub=Set.intersection
 	mt.__tostring=Set.tostring
-	mt.__metatable = "You cannot get the metatable" -- ÉèÖÃÍêÎÒµÄÔª±íÒÔºó£¬²»ÈÃÆäËûÈËÔÙÉèÖÃ
+	mt.__metatable = "You cannot get the metatable" -- è®¾ç½®å®Œæˆ‘çš„å…ƒè¡¨ä»¥åŽï¼Œä¸è®©å…¶ä»–äººå†è®¾ç½®
 	setmetatable(set, mt)
 	for i, v in pairs(t) do
 		set[v] = true
@@ -15,7 +15,7 @@ function Set.new(t)
 	return set
 end
 
--- ²¢¼¯²Ù×÷
+-- å¹¶é›†æ“ä½œ
 function Set.union(a, b)
 	local retSet = Set.new{}
 	for v in pairs(a) do
@@ -27,7 +27,7 @@ function Set.union(a, b)
 	return retSet
 end
 
--- ½»¼¯²Ù×÷
+-- äº¤é›†æ“ä½œ
 function Set.intersection(a, b)
 	local retSet = Set.new{}
 	for v in pairs(a) do
@@ -36,7 +36,7 @@ function Set.intersection(a, b)
 	return retSet
 end
 
--- ´òÓ¡¼¯ºÏµÄ²Ù×÷
+-- æ‰“å°é›†åˆçš„æ“ä½œ
 function Set.tostring(set)
     local s = "{"
     local sep = ""
@@ -56,8 +56,8 @@ print(s3)
 print(s4)
 --print(getmetatable(s3))
 --setmetatable(s3, {})
---ÉèÖÃÁË×Ö¶Î__metatableÊ±£¬getmetatable¾Í»á·µ»ØÕâ¸ö×Ö¶ÎµÄÖµ£¬¶øsetmetatableÔò»áÒý·¢Ò»¸ö´íÎó
---ÓÃÓÚ±£»¤Ôª±í
+--è®¾ç½®äº†å­—æ®µ__metatableæ—¶ï¼Œgetmetatableå°±ä¼šè¿”å›žè¿™ä¸ªå­—æ®µçš„å€¼ï¼Œè€Œsetmetatableåˆ™ä¼šå¼•å‘ä¸€ä¸ªé”™è¯¯
+--ç”¨äºŽä¿æŠ¤å…ƒè¡¨
 --[[
 -->		{40, 10, 20, 30}
 -->		{10}

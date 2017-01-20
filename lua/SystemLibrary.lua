@@ -1,4 +1,4 @@
---LuaµÄÏµÍ³¿â
+ï»¿--Luaçš„ç³»ç»Ÿåº“
 
 local t={}
 
@@ -27,8 +27,8 @@ end
 -->		concat	function: 00698400
 -->		sort	function: 00699010
 -->		remove	function: 00698F9
---tableÊµ¼ÊÉÏÊÇ·â×°ºÃµÄº¯Êý¿â
+--tableå®žé™…ä¸Šæ˜¯å°è£…å¥½çš„å‡½æ•°åº“
 
---Ò»Ð©³£ÓÃµÄ  #  type  tonumber tostring	format
+--ä¸€äº›å¸¸ç”¨çš„  #  type  tonumber tostring	format
 print(string.format("hi %d",2))
 -->		hi 2
